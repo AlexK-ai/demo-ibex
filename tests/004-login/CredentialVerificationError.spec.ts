@@ -28,7 +28,8 @@ test.describe("Credential Verification Error", () => {
     test.only(`alex-auto-snup-env Test`, {
         tag: ['@login', '@regression', '@sanity'],
     }, async ({ page }) => {
-        await page.goto("https://alex-auto-snup-env.ibex-ai.com/login")
+        await page.goto("https://sqa-350.ibex-ai.com/login");
+        await page.waitForTimeout(30000);
         await expect(page).toHaveTitle("The Galen™ Platform");
         await expect(page.locator('[class="logo"]')).toBeVisible();
     });
