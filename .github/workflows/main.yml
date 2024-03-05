@@ -21,10 +21,6 @@ jobs:
       run: npx playwright install chrome
     - name: Run Playwright tests
       run: npx playwright test
-      env:
-        BASE_URL: ${{secrets.BASE_URL}}
-        DEFAULT_USERNAME: ${{secrets.DEFAULT_USERNAME}}
-        DEFAULT_PASSWORD: ${{secrets.DEFAULT_PASSWORD}}
     - uses: actions/upload-artifact@v3
       if: always()
       with:
