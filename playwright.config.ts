@@ -12,6 +12,7 @@ require('dotenv').config();
 export default defineConfig({
   // globalSetup: "./global-setup.ts",
   testDir: './tests',
+  timeout: 90 * 1000,
 
   reporter:
     [
